@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=3">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
   <link rel="preload" as="image" href="assets/img/linija.webp">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -443,50 +443,82 @@
       </div>
     </section>
 
-    <!-- 10. NAUJIENLAIŠKIS — Salient: Row su fono spalva, CF7 inline forma -->
-    <section aria-labelledby="news-title">
-      <div class="container">
-        <div class="news" data-an>
-          <div><h2 class="h2" id="news-title" style="font-size:clamp(1.6rem,2.6vw,2.3rem)">Valymo patarimai ir pasiūlymai kartą per mėnesį</h2></div>
-          <div>
-            <form class="news__form" data-demo-form><label class="sr-only" for="nl4">El. paštas</label><input id="nl4" type="email" placeholder="Jūsų el. paštas" autocomplete="email" required><button class="btn" type="submit">Prenumeruoti</button></form>
-            <small>Prenumeratą galite atšaukti bet kada.</small>
-            <p class="form-msg" data-form-msg role="status"></p>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
-  <!-- POROŠTĖ — Salient: Footer „5 columns“ + Copyright bar -->
-  <footer class="foot">
+  <!-- POROŠTĖ — Salient: Global Section (poraštė) iš eilučių:
+       1) logotipas + naujienlaiškis (CF7 inline), 2) kontaktų kortelės (Fancy Box), 3) 5 nuorodų stulpeliai (Custom Menu),
+       4) mokėjimų ir pristatymo logotipai (Clients / Image), 5) teisinė juosta + „Į viršų“ -->
+  <footer class="ft" id="kontaktai">
     <div class="container">
-      <div class="foot__grid">
-        <div class="foot__brand">
+      <div class="ft__top">
+        <div class="ft__brand">
           <img src="shared/img/nanoteqa-logo-sviesus.png" alt="Nanoteqa" width="900" height="197" loading="lazy">
-          <p>Nanotechnologijomis patobulintos valymo priemonės ir hidrofobinės dangos. Formulės kuriamos laboratorijoje Belgijoje.</p>
+          <p>Nanotechnologijomis patobulintos valymo priemonės ir hidrofobinės dangos namams, automobiliams ir verslui. Formulės kuriamos laboratorijoje Belgijoje.</p>
           <div class="socials">
             <a href="https://www.facebook.com/nanoteqauk" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a>
             <a href="https://www.instagram.com/nanoteqa" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
             <a href="https://www.tiktok.com/@nanoteqa" aria-label="TikTok"><i class="ph ph-tiktok-logo" aria-hidden="true"></i></a>
             <a href="https://www.youtube.com/@nanoteqa" aria-label="YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+            <a href="https://www.pinterest.co.uk/nanoteqa/" aria-label="Pinterest"><i class="ph ph-pinterest-logo" aria-hidden="true"></i></a>
           </div>
         </div>
-        <div class="foot__col"><h4>Parduotuvė</h4><a href="#produktai" data-set="sub:virtuve">Virtuvė</a><a href="#produktai" data-set="sub:vonia">Vonia</a><a href="#produktai" data-set="area:auto">Automobiliams</a><a href="#produktai" data-set="kind:dangos">Nano dangos</a><a href="#produktai" data-tab-go="sale">Akcijos</a></div>
-        <div class="foot__col"><h4>Pagalba</h4><a href="#duk">Pristatymas</a><a href="#duk">Grąžinimas</a><a href="#duk">DUK</a><a href="#pagalba">Kontaktai</a></div>
-        <div class="foot__col"><h4>Įmonė</h4><a href="#verslui">Verslui</a><a href="#duk">Platintojams</a><a href="#duk">Partnerių programa</a><a href="#kaip">Technologija</a></div>
-        <div>
-          <h4>Kontaktai</h4>
-          <p class="foot__co"><strong>UAB „Nanoteqa“</strong><br>Domus PRO PC, Ukmergės g. 308, 12130 Vilnius</p>
-          <p class="foot__co"><strong>Nanoteqa Ltd</strong><br>71–75 Shelton Street, London WC2H 9JQ</p>
-          <p class="foot__co"><a href="tel:+37064888735">+370 648 88735</a><br><a href="mailto:info@nanoteqa.com">info@nanoteqa.com</a></p>
+        <div class="ft__news">
+          <p class="ft__eyebrow"><i class="ph ph-envelope-simple-open" aria-hidden="true"></i>Naujienlaiškis</p>
+          <h2 class="ft__h" id="news-title">Valymo patarimai ir pasiūlymai kartą per mėnesį</h2>
+          <form class="ft__form" data-demo-form>
+            <label class="sr-only" for="nl4">El. paštas</label>
+            <input id="nl4" type="email" placeholder="Jūsų el. paštas" autocomplete="email" required>
+            <button class="btn" type="submit">Prenumeruoti <i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+          </form>
+          <p class="ft__note">Prenumeratą galite atšaukti bet kada. Duomenis tvarkome pagal privatumo politiką.</p>
+          <p class="form-msg" data-form-msg role="status"></p>
         </div>
       </div>
-      <div class="foot__chips">
-        <div class="chips"><b>Mokėjimai</b><span>Visa</span><span>Mastercard</span><span>Apple Pay</span><span>Google Pay</span><span>Bancontact</span><span>iDEAL</span></div>
-        <div class="chips"><b>Pristatymas</b><span>DPD</span><span>LP Express</span><span>Omniva</span><span>UPS</span><span>FedEx</span></div>
+
+      <ul class="ft__contact">
+        <li><a href="tel:+37064888735"><i class="ph ph-phone" aria-hidden="true"></i><span><small>Skambinkite</small>+370 648 88735</span></a></li>
+        <li><a href="https://wa.me/447883203301"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i><span><small>WhatsApp</small>+44 7883 203301</span></a></li>
+        <li><a href="mailto:info@nanoteqa.com"><i class="ph ph-envelope-simple" aria-hidden="true"></i><span><small>Rašykite</small>info@nanoteqa.com</span></a></li>
+        <li><a href="#verslui"><i class="ph ph-buildings" aria-hidden="true"></i><span><small>Verslui</small>Gauti didmeninį pasiūlymą</span></a></li>
+      </ul>
+
+      <div class="ft__cols">
+        <nav class="ft__col" aria-label="Parduotuvė"><h3>Parduotuvė</h3>
+          <a href="#produktai" data-set="sub:virtuve">Virtuvė</a><a href="#produktai" data-set="sub:vonia">Vonia</a><a href="#produktai" data-set="sub:grindys">Grindys ir kilimai</a><a href="#produktai" data-set="sub:stiklas">Stiklas ir ekranai</a><a href="#produktai" data-set="sub:baldai">Baldai ir tekstilė</a><a href="#produktai" data-set="area:auto">Automobiliams</a><a href="#produktai" data-set="kind:dangos">Nano dangos</a><a href="#produktai" data-set="kind:rinkinys">Rinkiniai</a><a href="#produktai" data-tab-go="sale">Akcijos</a>
+        </nav>
+        <nav class="ft__col" aria-label="Verslui"><h3>Verslui</h3>
+          <a href="#produktai" data-set="area:biuras">Biurams</a><a href="#produktai" data-set="area:komercija">Restoranams ir viešbučiams</a><a href="#produktai" data-set="kind:pramone">Pramonei 20 l / 220 l</a><a href="#verslui">Didmeninis pasiūlymas</a><a href="#duk">Platintojams</a><a href="#duk">Partnerių programa</a>
+        </nav>
+        <nav class="ft__col" aria-label="Pagalba"><h3>Pagalba</h3>
+          <a href="#duk">Pristatymas ir apmokėjimas</a><a href="#duk">Grąžinimas</a><a href="#kaip">Kaip naudoti</a><a href="#duk">DUK</a><a href="#pagalba">Kontaktai</a><a href="#pagalba">Mano paskyra</a>
+        </nav>
+        <nav class="ft__col" aria-label="Apie Nanoteqa"><h3>Apie Nanoteqa</h3>
+          <a href="#kodel">Kodėl Nanoteqa</a><a href="#kaip">Technologija</a><a href="#rezultatai">Rezultatai</a><a href="#kodel">Laboratorija Belgijoje</a><a href="#duk">Straipsniai</a>
+        </nav>
+        <div class="ft__col ft__col--co"><h3>Įmonės</h3>
+          <p><strong>UAB „Nanoteqa“</strong>Domus PRO PC, Ukmergės g. 308<br>12130 Vilnius, Lietuva</p>
+          <p><strong>Nanoteqa Ltd</strong>71–75 Shelton Street<br>London WC2H 9JQ, Jungtinė Karalystė</p>
+        </div>
       </div>
-      <div class="foot__legal"><span>© 2026 Nanoteqa</span><nav aria-label="Teisinė informacija"><a href="#duk">Pirkimo taisyklės</a><a href="#duk">Grąžinimo politika</a><a href="#duk">Privatumo politika</a></nav></div>
+
+      <div class="ft__trust">
+        <div class="ft__box">
+          <p class="ft__eyebrow"><i class="ph ph-lock-simple" aria-hidden="true"></i>Saugūs mokėjimai</p>
+          <ul class="ft__pay" aria-label="Mokėjimo būdai"><li><img src="assets/img/mokejimai/visa.svg" alt="Visa" width="38" height="24" loading="lazy"></li><li><img src="assets/img/mokejimai/mastercard.svg" alt="Mastercard" width="38" height="24" loading="lazy"></li><li><img src="assets/img/mokejimai/american-express.svg" alt="American Express" width="38" height="24" loading="lazy"></li><li><img src="assets/img/mokejimai/apple-pay.svg" alt="Apple Pay" width="38" height="24" loading="lazy"></li><li><img src="assets/img/mokejimai/google-pay.svg" alt="Google Pay" width="38" height="24" loading="lazy"></li><li><img src="assets/img/mokejimai/bancontact.svg" alt="Bancontact" width="38" height="24" loading="lazy"></li><li><img src="assets/img/mokejimai/ideal.svg" alt="iDEAL" width="38" height="24" loading="lazy"></li></ul>
+          <p class="ft__note">Mokėkite kortele, Apple Pay, Google Pay, Bancontact ar iDEAL.</p>
+        </div>
+        <div class="ft__box">
+          <p class="ft__eyebrow"><i class="ph ph-truck" aria-hidden="true"></i>Pristatymas</p>
+          <ul class="ft__car" aria-label="Pristatymo partneriai"><li><img src="assets/img/pristatymas/dpd.svg" alt="DPD" loading="lazy"></li><li><img src="assets/img/pristatymas/lp-express.png" alt="LP Express" loading="lazy"></li><li><img src="assets/img/pristatymas/omniva.svg" alt="Omniva" loading="lazy"></li><li><img src="assets/img/pristatymas/ups.svg" alt="UPS" loading="lazy"></li><li><img src="assets/img/pristatymas/tnt.svg" alt="TNT" loading="lazy"></li><li><img src="assets/img/pristatymas/fedex.svg" alt="FedEx" loading="lazy"></li></ul>
+          <p class="ft__note">Lietuvoje: paštomatas 2,00 €, kurjeris 5,00 €. Išsiunčiame per 1–2 d. d., pristatome į 25 Europos šalis.</p>
+        </div>
+      </div>
+
+      <div class="ft__legal">
+        <span>© 2026 Nanoteqa. Visos teisės saugomos.</span>
+        <nav aria-label="Teisinė informacija"><a href="#duk">Pirkimo taisyklės</a><a href="#duk">Grąžinimo politika</a><a href="#duk">Privatumo politika</a><a href="#duk">Slapukų nustatymai</a></nav>
+        <a class="ft__top-btn" href="#turinys" data-top><i class="ph ph-arrow-up" aria-hidden="true"></i>Į viršų</a>
+      </div>
     </div>
   </footer>
 
