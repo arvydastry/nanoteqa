@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nanoteqa: valo šiandien, saugo visą savaitę</title>
+  <meta name="description" content="Nanosidabro valikliai ir hidrofobinės dangos namams, automobiliams ir verslui. Be chloro ir agresyvių rūgščių. Išsiunčiame per 1–2 darbo dienas, į paštomatą nuo 2 €.">
+  <!-- noindex skirtas tik maketui: į WordPress neperkelti -->
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="shared/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..700&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="preload" as="image" href="assets/img/linija.webp">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#turinys">Pereiti prie turinio</a>
+
+  <!-- Salient: Header Secondary Bar (3 pranašumai prie pirkimo sprendimo + pagalbos nuorodos) -->
+  <div class="util">
+    <div class="container util__inner">
+      <ul class="util__usp">
+        <li><i class="ph ph-truck" aria-hidden="true"></i>Išsiunčiame per 1–2 darbo dienas</li>
+        <li><i class="ph ph-package" aria-hidden="true"></i>Į paštomatą Lietuvoje nuo 2 €</li>
+        <li><i class="ph ph-globe-hemisphere-west" aria-hidden="true"></i>Pristatome į 25 Europos šalis</li>
+      </ul>
+      <nav class="util__links" aria-label="Pagalba"><a href="#verslui">Verslui</a><a href="#duk">Pagalba</a><a href="tel:+37064888735">+370 648 88735</a></nav>
+    </div>
+  </div>
+
+  <!-- Salient: Header „Default“ (logotipas kairėje) + WooCommerce produktų paieška su pasiūlymais,
+       antra eilutė – Secondary Menu su kategorijomis ir Mega Menu -->
+  <header class="hdr" data-hdr>
+    <div class="container hdr__main">
+      <div style="display:flex;align-items:center;gap:6px">
+        <button class="icon-b burger" type="button" data-oc-open aria-label="Atidaryti meniu" aria-controls="oc" aria-expanded="false"><i class="ph ph-list" aria-hidden="true"></i></button>
+        <a class="brand" href="index.html" aria-label="Nanoteqa, pradžia"><img src="shared/img/nanoteqa-logo-tamsus.png" alt="Nanoteqa" width="900" height="197"></a>
+      </div>
+      <form class="find" role="search" data-find>
+        <label class="sr-only" for="q4">Ieškoti produktų</label>
+        <div class="find__box">
+          <i class="ph ph-magnifying-glass" aria-hidden="true"></i>
+          <input id="q4" type="search" placeholder="Ko ieškote? Pvz., riebalų valiklis" autocomplete="off" aria-controls="find-drop" aria-autocomplete="list">
+          <button type="submit">Ieškoti</button>
+        </div>
+        <div class="find__drop" id="find-drop" role="listbox" data-find-drop></div>
+      </form>
+      <div class="acts">
+        <a class="btn btn--line btn--sm acts__b2b" href="#verslui">Kainos verslui</a>
+        <a class="icon-b" href="#pagalba" aria-label="Paskyra"><i class="ph ph-user" aria-hidden="true"></i><span class="icon-b__label">Paskyra</span></a>
+        <button class="icon-b" type="button" data-cart-open aria-label="Krepšelis"><i class="ph ph-shopping-bag" aria-hidden="true"></i><span class="icon-b__n" data-cart-n>0</span><span class="icon-b__sum" data-cart-sum-h>0,00 €</span></button>
+      </div>
+    </div>
+    <nav class="cats-nav" aria-label="Kategorijos">
+      <div class="container cats-nav__inner">
+        <div class="mega-wrap" data-mega>
+          <button class="cats-nav__all" type="button" aria-expanded="false" aria-controls="mega"><i class="ph ph-squares-four" aria-hidden="true"></i>Visi produktai</button>
+        </div>
+        <a href="#produktai" data-set="sub:virtuve"><span class="dot" style="background:var(--t-virtuve)"></span>Virtuvė</a>
+        <a href="#produktai" data-set="sub:vonia"><span class="dot" style="background:var(--t-vonia)"></span>Vonia</a>
+        <a href="#produktai" data-set="sub:grindys"><span class="dot" style="background:var(--t-grindys)"></span>Grindys</a>
+        <a href="#produktai" data-set="sub:stiklas"><span class="dot" style="background:var(--t-stiklas)"></span>Stiklas</a>
+        <a href="#produktai" data-set="sub:baldai"><span class="dot" style="background:var(--t-tekstile)"></span>Baldai ir tekstilė</a>
+        <a href="#produktai" data-set="area:auto"><span class="dot" style="background:var(--t-auto)"></span>Automobiliams</a>
+        <a href="#produktai" data-set="kind:dangos"><span class="dot" style="background:var(--t-dangos)"></span>Nano dangos</a>
+        <a href="#produktai" data-set="kind:nanosidabras"><span class="dot" style="background:var(--t-sidabras)"></span>Nanosidabras</a>
+        <a href="#verslui"><span class="dot" style="background:var(--t-pramone)"></span>Verslui 20 l / 220 l</a>
+        <a class="cats-nav__sale" href="#produktai" data-tab-go="sale"><i class="ph-fill ph-tag" aria-hidden="true"></i>Akcijos</a>
+      </div>
+    </nav>
+    <div class="mega" id="mega" data-mega-panel>
+      <div class="container mega__grid">
+        <div class="mega__col"><h4>Namams</h4>
+          <a href="#produktai" data-set="sub:virtuve">Virtuvė <span data-count="sub:virtuve"></span></a>
+          <a href="#produktai" data-set="sub:vonia">Vonia <span data-count="sub:vonia"></span></a>
+          <a href="#produktai" data-set="sub:grindys">Grindys ir kilimai <span data-count="sub:grindys"></span></a>
+          <a href="#produktai" data-set="sub:baldai">Baldai ir tekstilė <span data-count="sub:baldai"></span></a>
+          <a href="#produktai" data-set="sub:stiklas">Stiklas ir ekranai <span data-count="sub:stiklas"></span></a>
+          <a href="#produktai" data-set="sub:lauke">Terasa ir lauke <span data-count="sub:lauke"></span></a>
+        </div>
+        <div class="mega__col"><h4>Specialūs</h4>
+          <a href="#produktai" data-set="area:auto">Automobiliams <span data-count="area:auto"></span></a>
+          <a href="#produktai" data-set="kind:dangos">Nano dangos <span data-count="kind:dangos"></span></a>
+          <a href="#produktai" data-set="kind:nanosidabras">Nanosidabras <span data-count="kind:nanosidabras"></span></a>
+          <a href="#produktai" data-set="kind:rinkinys">Rinkiniai <span data-count="kind:rinkinys"></span></a>
+        </div>
+        <div class="mega__col"><h4>Verslui</h4>
+          <a href="#produktai" data-set="area:biuras">Biurams <span data-count="area:biuras"></span></a>
+          <a href="#produktai" data-set="area:komercija">Restoranams ir viešbučiams <span data-count="area:komercija"></span></a>
+          <a href="#produktai" data-set="kind:pramone">Pramonei 20 l / 220 l <span data-count="kind:pramone"></span></a>
+          <a href="#verslui">Didmeninis pasiūlymas <span>→</span></a>
+        </div>
+        <div class="mega__col"><h4>Greitai rasti</h4>
+          <a href="#produktai" data-tab-go="top">Perkamiausi</a>
+          <a href="#produktai" data-tab-go="sale">Akcijos</a>
+          <a href="#produktai" data-tab-go="new">Naujienos</a>
+          <a href="#produktai" data-set="size:5 l">5 l papildymo talpos <span data-count="size:5 l"></span></a>
+        </div>
+        <a class="mega__promo" href="#produktai" data-set="kind:auto">
+          <div><strong>Nauja automobilių priežiūros linija</strong><span>8 priemonės kėbului, salonui ir stiklams</span></div>
+          <img src="shared/img/produktai/car-nano-shampoo-500ml-1.webp" alt="" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobilusis meniu (Salient: Off Canvas „Slide Out From Left“) -->
+  <div class="oc" id="oc" role="dialog" aria-modal="true" aria-label="Meniu">
+    <div class="oc__bg" data-oc-close></div>
+    <div class="oc__panel">
+      <div class="oc__top"><img src="shared/img/nanoteqa-logo-tamsus.png" alt="Nanoteqa" width="900" height="197"><button class="x" type="button" data-oc-close aria-label="Uždaryti meniu"><i class="ph ph-x" aria-hidden="true"></i></button></div>
+      <nav class="oc__links" aria-label="Kategorijos">
+        <a href="#produktai" data-set="sub:virtuve" data-oc-close><span class="dot" style="background:var(--t-virtuve)"></span>Virtuvė</a>
+        <a href="#produktai" data-set="sub:vonia" data-oc-close><span class="dot" style="background:var(--t-vonia)"></span>Vonia</a>
+        <a href="#produktai" data-set="sub:grindys" data-oc-close><span class="dot" style="background:var(--t-grindys)"></span>Grindys</a>
+        <a href="#produktai" data-set="sub:stiklas" data-oc-close><span class="dot" style="background:var(--t-stiklas)"></span>Stiklas</a>
+        <a href="#produktai" data-set="area:auto" data-oc-close><span class="dot" style="background:var(--t-auto)"></span>Automobiliams</a>
+        <a href="#produktai" data-set="kind:dangos" data-oc-close><span class="dot" style="background:var(--t-dangos)"></span>Nano dangos</a>
+        <a href="#verslui" data-oc-close><span class="dot" style="background:var(--t-pramone)"></span>Verslui</a>
+        <a href="#duk" data-oc-close><span class="dot" style="background:var(--aqua-100)"></span>Pagalba</a>
+      </nav>
+      <div class="oc__foot"><a class="btn btn--block" href="tel:+37064888735"><i class="ph ph-phone" aria-hidden="true"></i>+370 648 88735</a><a class="btn btn--line btn--block" href="https://wa.me/447883203301">WhatsApp</a></div>
+    </div>
+  </div>
+
+  <main id="turinys">
+
+    <!-- 1. HERO — vertės pasiūlymas per 5 sekundes: ką parduodame, kam, kuo skiriamės; pagrindinis ir antrinis veiksmas;
+         pasitikėjimo ženklai šalia mygtukų.
+         Salient: Row → Column su apvalintu gradientiniu fonu, Highlighted Text, Button ×2, Icon List,
+         Image with Animation (Parallax), „Mini product“ – WooCommerce Product (Add to cart) -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="stage">
+          <div class="stage__grid">
+            <div class="stage__copy">
+              <p class="eyebrow" data-an><i class="ph-fill ph-atom" aria-hidden="true"></i>Nanosidabro technologija · laboratorija Belgijoje</p>
+              <h1 class="h1" id="hero-title" data-an style="--d:80ms">Valo šiandien. <span class="hl">Saugo visą savaitę.</span></h1>
+              <p class="lead" data-an style="--d:160ms">Valikliai ir hidrofobinės dangos namams, automobiliams ir verslui. Po valymo lieka nano plėvelė, todėl dulkės ir nešvarumai kaupiasi lėčiau iki 7 dienų.</p>
+              <div class="stage__ctas" data-an style="--d:240ms">
+                <a class="btn" href="#ka-valyti">Rinktis pagal paviršių <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+                <a class="btn btn--white" href="#verslui">Kainos verslui</a>
+              </div>
+              <ul class="stage__trust" data-an style="--d:320ms">
+                <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Be chloro ir agresyvių rūgščių</li>
+                <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Saugu vaikams ir gyvūnams</li>
+                <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>100 % perdirbtas plastikas</li>
+              </ul>
+            </div>
+            <div class="stage__visual">
+              <span class="stage__blob" aria-hidden="true"></span>
+              <div class="stage__img" data-px="0.08"><img src="assets/img/linija.webp" alt="Nanoteqa buitinių valiklių linija" width="1800" height="847"></div>
+              <div class="sticker sticker--a" aria-hidden="true">
+                <svg viewBox="0 0 144 144"><defs><path id="st" d="M72 72m-62 0a62 62 0 1 1 124 0a62 62 0 1 1-124 0"/></defs><text><textPath href="#st">Nano plėvelė · saugo iki 7 dienų ·</textPath></text></svg>
+                <span><strong>7 d.</strong><small>apsauga</small></span>
+              </div>
+              <div class="mini" data-an style="--d:500ms">
+                <span class="th" style="--tint:var(--t-lauke)"><img src="shared/img/produktai/apc-cleaner-1.webp" alt=""></span>
+                <div><small>Perkamiausias</small><strong>Universalus valiklis</strong><span>nuo 7,03 €</span></div>
+                <button type="button" data-add="apc-cleaner" aria-label="Į krepšelį: Universalus valiklis"><i class="ph ph-plus" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="usps">
+          <li class="usp" data-an><i class="ph ph-drop-half" aria-hidden="true"></i><div><strong>Nano plėvelė iki 7 dienų</strong><span>Antistatinis poveikis po valymo</span></div></li>
+          <li class="usp" data-an style="--d:60ms"><i class="ph ph-flask" aria-hidden="true"></i><div><strong>Didelė koncentracija</strong><span>Priemonės sunaudojate mažiau</span></div></li>
+          <li class="usp" data-an style="--d:120ms"><i class="ph ph-truck" aria-hidden="true"></i><div><strong>Išsiunčiame per 1–2 d. d.</strong><span>Paštomatai nuo 2 €, kurjeris 5 €</span></div></li>
+          <li class="usp" data-an style="--d:180ms"><i class="ph ph-headset" aria-hidden="true"></i><div><strong>Nemokama konsultacija</strong><span>Padėsime parinkti priemonę</span></div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 2. KĄ NORITE IŠVALYTI? — pirkimas pagal užduotį (paviršių), o ne pagal produkto tipą (Baymard: kategorijos pagal naudojimo kontekstą).
+         Salient: WooCommerce Category Grid („Content under image“), kiekviena kolona savo fono spalva -->
+    <section class="sec" id="ka-valyti" aria-labelledby="tasks-title" style="padding-bottom:0">
+      <div class="container">
+        <div class="sec-head" data-an>
+          <div><p class="kicker">Pirkite pagal paviršių</p><h2 class="h2" id="tasks-title">Ką norite išvalyti?</h2></div>
+          <a class="link" href="#produktai" data-set="all">Visi <span data-count="all"></span> produktai <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+        <div class="tasks">
+          <a class="task" href="#produktai" data-set="sub:virtuve" style="--tint:var(--t-virtuve)" data-an><div class="task__top"><div><h3>Virtuvė</h3><small><span data-count="sub:virtuve"></span> priemonės riebalams ir kalkėms</small></div><span class="task__arrow"><i class="ph ph-arrow-right" aria-hidden="true"></i></span></div><div class="task__img"><img src="shared/img/produktai/kitchen-surface-cleaner-1.webp" alt="" loading="lazy"></div></a>
+          <a class="task" href="#produktai" data-set="sub:vonia" style="--tint:var(--t-vonia)" data-an><div class="task__top"><div><h3>Vonia</h3><small><span data-count="sub:vonia"></span> priemonės kalkėms ir pelėsiui</small></div><span class="task__arrow"><i class="ph ph-arrow-right" aria-hidden="true"></i></span></div><div class="task__img"><img src="shared/img/produktai/active-bath-1.webp" alt="" loading="lazy"></div></a>
+          <a class="task" href="#produktai" data-set="sub:grindys" style="--tint:var(--t-grindys)" data-an><div class="task__top"><div><h3>Grindys ir kilimai</h3><small><span data-count="sub:grindys"></span> priemonės medienai ir plytelėms</small></div><span class="task__arrow"><i class="ph ph-arrow-right" aria-hidden="true"></i></span></div><div class="task__img"><img src="shared/img/produktai/daily-floor-1.webp" alt="" loading="lazy"></div></a>
+          <a class="task" href="#produktai" data-set="sub:stiklas" style="--tint:var(--t-stiklas)" data-an><div class="task__top"><div><h3>Stiklas ir ekranai</h3><small>Blizgesys be dryžių</small></div><span class="task__arrow"><i class="ph ph-arrow-right" aria-hidden="true"></i></span></div><div class="task__img"><img src="shared/img/produktai/window-cleaner-1.webp" alt="" loading="lazy"></div></a>
+          <a class="task" href="#produktai" data-set="sub:baldai" style="--tint:var(--t-tekstile)" data-an><div class="task__top"><div><h3>Baldai ir tekstilė</h3><small>Dėmės, oda, apmušalai</small></div><span class="task__arrow"><i class="ph ph-arrow-right" aria-hidden="true"></i></span></div><div class="task__img"><img src="shared/img/produktai/textile-cleaner-1.webp" alt="" loading="lazy"></div></a>
+          <a class="task" href="#produktai" data-set="area:auto" style="--tint:var(--t-auto)" data-an><div class="task__top"><div><h3>Automobilis</h3><small>Kėbulas, salonas, stiklai</small></div><span class="task__arrow"><i class="ph ph-arrow-right" aria-hidden="true"></i></span></div><div class="task__img" style="width:48%"><img src="shared/img/produktai/car-nano-shampoo-500ml-1.webp" alt="" loading="lazy"></div></a>
+          <a class="task" href="#produktai" data-set="sub:lauke" style="--tint:var(--t-lauke)" data-an><div class="task__top"><div><h3>Terasa ir lauke</h3><small>Trinkelės, dumbliai, samanos</small></div><span class="task__arrow"><i class="ph ph-arrow-right" aria-hidden="true"></i></span></div><div class="task__img"><img src="shared/img/produktai/patio-driveway-cleaner-500ml-1.webp" alt="" loading="lazy"></div></a>
+          <a class="task" href="#produktai" data-set="kind:dangos" style="--tint:var(--t-dangos)" data-an><div class="task__top"><div><h3>Apsauga nuo vandens</h3><small><span data-count="kind:dangos"></span> hidrofobinės dangos</small></div><span class="task__arrow"><i class="ph ph-arrow-right" aria-hidden="true"></i></span></div><div class="task__img" style="width:48%"><img src="shared/img/produktai/glass-coating-1.webp" alt="" loading="lazy"></div></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PERKAMIAUSI — greitas pirkimas be produkto puslapio: talpos pasirinkimas, kaina ir „Į krepšelį“ kortelėje.
+         Salient: Tabbed Section („Minimal“) + WooCommerce Products; kortelė – WooCommerce variacijų swatch'ai (pvz. „Variation Swatches“ įskiepis) -->
+    <section class="sec" id="produktai" aria-labelledby="grid-title">
+      <div class="container">
+        <div class="sec-head" data-an>
+          <div><p class="kicker" data-grid-kicker>Klientų pasirinkimas</p><h2 class="h2" id="grid-title" data-grid-title>Perkamiausi produktai</h2></div>
+          <div class="tabs" role="tablist" aria-label="Produktų grupės" data-tabs>
+            <button role="tab" type="button" aria-selected="true" data-tab="top">Perkamiausi</button>
+            <button role="tab" type="button" aria-selected="false" data-tab="sale">Akcijos<span data-count="tab:sale"></span></button>
+            <button role="tab" type="button" aria-selected="false" data-tab="new">Naujienos<span data-count="tab:new"></span></button>
+            <button role="tab" type="button" aria-selected="false" data-tab="kits">Rinkiniai</button>
+          </div>
+        </div>
+        <div class="grid" data-grid aria-live="polite"></div>
+        <div class="grid-foot"><a class="btn btn--line" href="#produktai" data-set="all" data-more>Rodyti visus produktus <i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+      </div>
+    </section>
+
+    <!-- 4. KODĖL NANO — skirtumas nuo įprasto valiklio aiškia lentele (prieštaravimas „kam mokėti daugiau?“).
+         Salient: Row su tamsiu apvalintu fonu, Text block (lentelė), Button -->
+    <section class="sec" style="padding-top:0" aria-labelledby="why-title">
+      <div class="container">
+        <div class="why" data-an>
+          <div class="why__copy">
+            <p class="kicker">Kuo skiriasi nano valiklis</p>
+            <h2 class="h2" id="why-title">Ne tik išvalo, bet ir apsaugo</h2>
+            <p class="lead">Įprastas valiklis pašalina nešvarumus. Nanoteqa priemonės dar palieka ploną plėvelę su sidabro nanodalelėmis, todėl paviršius ilgiau išlieka švarus.</p>
+            <a class="btn btn--white" href="#kaip">Kaip tai veikia <i class="ph ph-arrow-down" aria-hidden="true"></i></a>
+          </div>
+          <div>
+            <table class="cmp">
+              <caption class="sr-only">Nanoteqa ir įprasto valiklio palyginimas</caption>
+              <thead><tr><th scope="col">Savybė</th><th scope="col" class="us">Nanoteqa</th><th scope="col">Įprastas valiklis</th></tr></thead>
+              <tbody>
+                <tr><td>Pašalina riebalus, dulkes ir kalkes</td><td class="us"><i class="ph-fill ph-check-circle y" aria-label="Taip"></i></td><td><i class="ph-fill ph-check-circle y" aria-label="Taip"></i></td></tr>
+                <tr><td>Palieka apsauginę nano plėvelę</td><td class="us"><i class="ph-fill ph-check-circle y" aria-label="Taip"></i><small>iki 7 dienų</small></td><td><i class="ph ph-minus n" aria-label="Paprastai ne"></i></td></tr>
+                <tr><td>Sidabro nanodalelės</td><td class="us"><i class="ph-fill ph-check-circle y" aria-label="Taip"></i></td><td><i class="ph ph-minus n" aria-label="Paprastai ne"></i></td></tr>
+                <tr><td>Antistatinis poveikis</td><td class="us"><i class="ph-fill ph-check-circle y" aria-label="Taip"></i></td><td><i class="ph ph-minus n" aria-label="Paprastai ne"></i></td></tr>
+                <tr><td>Be chloro, agresyvių rūgščių ir šarmų</td><td class="us"><i class="ph-fill ph-check-circle y" aria-label="Taip"></i></td><td><small>priklauso nuo gamintojo</small></td></tr>
+                <tr><td>Tinka paviršiams, kurie liečiasi su maistu</td><td class="us"><i class="ph-fill ph-check-circle y" aria-label="Taip"></i></td><td><small>ne visada</small></td></tr>
+              </tbody>
+            </table>
+            <p style="margin-top:12px;font-size:13px;color:#9fb0c3">Palyginimas pagal Nanoteqa produktų aprašymus. Įprastų valiklių savybės skiriasi pagal gamintoją.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. KAIP NAUDOTI — 3 žingsniai + rezultatas (sumažina nežinomybę prieš pirkimą).
+         Salient: Fancy Box ×4 (numeruoti) + Video Player (self-hosted, autoplay, muted) -->
+    <section class="sec" id="kaip" style="padding-top:0" aria-labelledby="how-title">
+      <div class="container">
+        <div class="sec-head" data-an><div><p class="kicker">Paprasta naudoti</p><h2 class="h2" id="how-title">Trys žingsniai iki apsaugoto paviršiaus</h2></div></div>
+        <div class="how">
+          <ol class="steps">
+            <li class="step" data-an><span class="step__n">1</span><div><h3 class="h3">Purkškite</h3><p>Tolygiai išpurkškite priemonę ant paviršiaus.</p></div></li>
+            <li class="step" data-an style="--d:80ms"><span class="step__n">2</span><div><h3 class="h3">Nuvalykite</h3><p>Nuvalykite šepetėliu ar kempine. Vandens naudoti nebūtina.</p></div></li>
+            <li class="step" data-an style="--d:160ms"><span class="step__n">3</span><div><h3 class="h3">Nupoliruokite</h3><p>Nupoliruokite mikropluošto šluoste: taip nanodalelės įsiskverbia į paviršių.</p></div></li>
+            <li class="step step--result" data-an style="--d:240ms"><span class="step__n">7 d.</span><div><h3 class="h3">Paviršius apsaugotas</h3><p>Plėvelė neleidžia greitai kauptis dulkėms ir nešvarumams, vanduo susirenka į lašus.</p></div></li>
+          </ol>
+          <figure class="how__video" data-an>
+            <video autoplay muted loop playsinline preload="none" data-lazy poster="https://images.pexels.com/videos/9709118/pexels-photo-9709118.jpeg?auto=compress&cs=tinysrgb&w=1000" aria-hidden="true">
+              <source data-src="https://videos.pexels.com/video-files/9709118/9709118-sd_960_540_30fps.mp4" type="video/mp4">
+            </video>
+            <figcaption><i class="ph-fill ph-drop" aria-hidden="true"></i>Hidrofobinis efektas: vanduo susirenka į lašus ir nubėga</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. ĮRODYMAI — tikra „prieš / po“ nuotrauka, skaičiai, prekyvietės, atsiliepimai (socialinis įrodymas).
+         Salient: Image Comparison, Milestone ×4, Testimonial Slider („Multiple visible“) arba Judge.me valdiklis -->
+    <section class="sec" id="rezultatai" style="padding-top:0" aria-labelledby="proof-title">
+      <div class="container">
+        <div class="sec-head" data-an><div><p class="kicker">Rezultatai</p><h2 class="h2" id="proof-title">Pažiūrėkite patys</h2></div><p class="muted" style="max-width:38ch">Patraukite slankiklį: tas pats paviršius prieš ir po valymo dumblių, samanų ir pelėsių valikliu.</p></div>
+        <div class="proof">
+          <div data-an>
+            <div class="ba" data-ba style="--pos:50%">
+              <img src="assets/img/po.webp" alt="Paviršius po valymo" loading="lazy">
+              <img class="ba__before" src="assets/img/pries.webp" alt="Paviršius prieš valymą, su pelėsio dėmėmis" loading="lazy">
+              <span class="ba__lbl ba__lbl--l">Prieš</span><span class="ba__lbl ba__lbl--r">Po</span>
+              <span class="ba__handle" aria-hidden="true"><span><i class="ph ph-arrows-left-right"></i></span></span>
+              <label class="sr-only" for="ba-range">Palyginimo slankiklis</label>
+              <input id="ba-range" type="range" min="0" max="100" value="50" data-ba-range>
+            </div>
+            <div class="proof__cap">
+              <div class="proof__prod"><span class="th" style="--tint:var(--t-lauke)"><img src="shared/img/produktai/algae-mould-remover-500ml-1.webp" alt=""></span><div><strong>Dumblių, samanų ir pelėsių valiklis</strong><span data-price="algae-mould-remover-500ml"></span></div></div>
+              <button class="btn btn--sm" type="button" data-add="algae-mould-remover-500ml">Į krepšelį</button>
+            </div>
+          </div>
+          <div class="stats">
+            <div class="stat" data-an><strong><span data-count-to="54">54</span></strong><span>produktai namams, verslui ir automobiliams</span></div>
+            <div class="stat" data-an style="--d:60ms"><strong><span data-count-to="25">25</span></strong><span>Europos šalys, į kurias pristatome</span></div>
+            <div class="stat" data-an style="--d:120ms"><strong><span data-count-to="7">7</span><sup>d.</sup></strong><span>nano plėvelės antistatinis poveikis</span></div>
+            <div class="stat" data-an style="--d:180ms"><strong><span data-count-to="100">100</span><sup>%</sup></strong><span>perdirbtas JK plastikas pakuotėms</span></div>
+            <div class="stat stat--wide" data-an><p>Taip pat parduodame</p><b>Amazon</b><b>eBay</b><b>Etsy</b><b>Allegro</b><b>TikTok Shop</b></div>
+          </div>
+        </div>
+
+        <div class="reviews">
+          <blockquote class="review" data-an><span class="review__demo">Pavyzdys</span><div class="review__stars" aria-label="5 iš 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><p>„Stiklinės durys po valymo ilgiau išlieka švarios, dulkės nesikaupia taip greitai.“</p><footer><span class="av" style="--tint:var(--t-stiklas)">A</span><div><strong>Aistė</strong><small>Langų ir ekranų valiklis</small></div></footer></blockquote>
+          <blockquote class="review" data-an style="--d:80ms"><span class="review__demo">Pavyzdys</span><div class="review__stars" aria-label="5 iš 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><p>„Naudojame kavinės virtuvėje: riebalų valiklis greitai nuima riebalus nuo gartraukio ir viryklės.“</p><footer><span class="av" style="--tint:var(--t-virtuve)">T</span><div><strong>Tomas</strong><small>Virtuvės riebalų valiklis</small></div></footer></blockquote>
+          <blockquote class="review" data-an style="--d:160ms"><span class="review__demo">Pavyzdys</span><div class="review__stars" aria-label="5 iš 5"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div><p>„Svarbiausia, kad nėra chloro kvapo: namuose auga mažylis ir šuo.“</p><footer><span class="av" style="--tint:var(--t-lauke)">I</span><div><strong>Ieva</strong><small>Universalus valiklis</small></div></footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. RINKINIAI — didesnė krepšelio vertė (bundle), dovanų proga.
+         Salient: Row 2 kolonos su fono spalva / nuotrauka, WooCommerce Add to cart -->
+    <section class="sec" style="padding-top:0" aria-labelledby="kits-title">
+      <div class="container">
+        <div class="sec-head" data-an><div><p class="kicker">Rinkiniai</p><h2 class="h2" id="kits-title">Viskas vienoje dėžėje</h2></div></div>
+        <div class="kits">
+          <article class="kit" style="--tint:var(--t-rinkinys)" data-an>
+            <div class="kit__copy">
+              <span class="tag">Tinka dovanai</span>
+              <h3 class="h2" style="font-size:clamp(1.6rem,2.4vw,2.2rem)">Viso namų valymo rinkinys</h3>
+              <p class="muted" style="color:var(--ink-2)">12 priemonių virtuvei, voniai, grindims, baldams ir audiniams.</p>
+              <div class="kit__price"><strong>99,00 €</strong><span>12 vnt. pakuotė</span></div>
+              <button class="btn" type="button" data-add="home-kit">Į krepšelį <i class="ph ph-plus" aria-hidden="true"></i></button>
+            </div>
+            <div class="kit__img"><img src="shared/img/produktai/home-kit-1.webp" alt="Viso namų valymo rinkinio dėžė" loading="lazy"></div>
+          </article>
+          <article class="kit kit--photo" data-an style="--d:100ms">
+            <div class="kit__img"><img src="shared/img/nanoteqa/kelioniu-rinkinys-papludimys.webp" alt="Kelionių valymo rinkinys paplūdimyje" loading="lazy"></div>
+            <div class="kit__copy">
+              <span class="tag">Kelionėms</span>
+              <h3 class="h3" style="font-size:24px">Kelionių valymo rinkinys</h3>
+              <div class="kit__price"><strong>45,00 €</strong><span>ekranams, audiniams, odai</span></div>
+              <button class="btn btn--white" type="button" data-add="travel-cleaners-kit">Į krepšelį <i class="ph ph-plus" aria-hidden="true"></i></button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. NAMAMS / VERSLUI — du aiškūs keliai skirtingoms auditorijoms.
+         Salient: 2 kolonos (Fancy Box), Icon List, Button; verslui – nuoroda į CF7 užklausos formą -->
+    <section class="sec" id="verslui" style="padding-top:0" aria-labelledby="paths-title">
+      <div class="container">
+        <h2 class="sr-only" id="paths-title">Namams ir verslui</h2>
+        <div class="paths">
+          <article class="path" data-an>
+            <div class="path__top">
+              <p class="kicker">Namams</p>
+              <h3 class="h2" style="font-size:clamp(1.7rem,2.6vw,2.4rem)">Perkate namams?</h3>
+              <ul>
+                <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Į paštomatą 2 €, kurjeriu 5 €, išsiunčiame per 1–2 d. d.</li>
+                <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>500 ml buteliai ir 5 l talpos papildymui</li>
+                <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Saugu vaikų kambariams ir namams su gyvūnais</li>
+              </ul>
+            </div>
+            <div class="path__ctas"><a class="btn" href="#ka-valyti">Rinktis produktus <i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+          </article>
+          <article class="path path--b2b" data-an style="--d:100ms">
+            <div class="path__top">
+              <p class="kicker">Verslui</p>
+              <h3 class="h2" style="font-size:clamp(1.7rem,2.6vw,2.4rem)">Perkate verslui?</h3>
+              <div class="vols"><span>5<small>l</small></span><span>20<small>l</small></span><span>220<small>l</small></span></div>
+              <ul>
+                <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Didmeninės kainos pagal kiekį restoranams, viešbučiams, biurams ir pramonei</li>
+                <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i><span><span data-count="kind:pramone"></span> profesionalūs koncentratai: transportas, fasadai, gamyba</span></li>
+                <li><i class="ph-fill ph-check-circle" aria-hidden="true"></i>Nemokama specialisto konsultacija, pristatymas visoje Europoje</li>
+              </ul>
+            </div>
+            <div class="path__ctas">
+              <a class="btn" href="#pagalba">Gauti pasiūlymą <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+              <a class="link" href="tel:+37064888735"><i class="ph ph-phone" aria-hidden="true"></i>+370 648 88735</a>
+              <div class="path__img" aria-hidden="true" style="margin-left:auto"><img src="shared/img/produktai/heavy-transport-wash-2.webp" alt="" loading="lazy"><img src="shared/img/produktai/heavy-transport-wash-1.webp" alt="" loading="lazy"></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. DUK — dažniausi prieštaravimai prieš pirkimą + tiesioginis kontaktas.
+         Salient: Toggles („Default“), Text block su kontaktais (Sticky column) -->
+    <section class="sec" id="duk" style="padding-top:0" aria-labelledby="faq-title">
+      <div class="container faq">
+        <div class="faq__side">
+          <p class="kicker">DUK</p>
+          <h2 class="h2" id="faq-title">Prieš perkant dažnai klausia</h2>
+          <div class="help" id="pagalba">
+            <div class="help__who"><i class="ph ph-headset" aria-hidden="true"></i><div><strong>Nemokamai patarsime</strong><small>Padėsime parinkti priemonę ar didmeninį kiekį</small></div></div>
+            <a href="tel:+37064888735"><i class="ph ph-phone" aria-hidden="true"></i>+370 648 88735</a>
+            <a href="https://wa.me/447883203301"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>WhatsApp +44 7883 203301</a>
+            <a href="mailto:info@nanoteqa.com"><i class="ph ph-envelope-simple" aria-hidden="true"></i>info@nanoteqa.com</a>
+          </div>
+        </div>
+        <div>
+          <details class="qa" data-an open><summary>Ar priemonės saugios vaikams ir gyvūnams?<i class="ph ph-plus" aria-hidden="true"></i></summary><div class="qa__a">Taip. Gaminiuose nėra agresyvių rūgščių, šarmų, chloro ir kitų medžiagų, galinčių sukelti alergines reakcijas. Jais galima valyti vaikų kambarius, patalpas su gyvūnais ir paviršius, kurie liečiasi su maistu.</div></details>
+          <details class="qa" data-an><summary>Kiek laiko išlieka nano plėvelė?<i class="ph ph-plus" aria-hidden="true"></i></summary><div class="qa__a">Valiklių plėvelė ir antistatinis poveikis išlieka iki 7 dienų. Hidrofobinės dangos stiklui, metalui, tekstilei, odai ir medienai sukuria patvaresnį vandenį ir riebalus atstumiantį sluoksnį.</div></details>
+          <details class="qa" data-an><summary>Kiek kainuoja ir kiek trunka pristatymas?<i class="ph ph-plus" aria-hidden="true"></i></summary><div class="qa__a">Lietuvoje į DPD, LP Express ar Omniva paštomatą 2,00 € (1–2 d. d.), kurjeriu iki durų 5,00 € (2–3 d. d.). Užsakymus išsiunčiame per 1–2 darbo dienas po apmokėjimo. Į kitas šalis kaina skaičiuojama pagal siuntinį.</div></details>
+          <details class="qa" data-an><summary>Kuo 5 l talpa geresnė už 500 ml?<i class="ph ph-plus" aria-hidden="true"></i></summary><div class="qa__a">5 l talpa skirta papildyti buteliams su purkštuku: litro kaina mažesnė, o plastiko sunaudojama mažiau. Pavyzdžiui, universalus valiklis 500 ml kainuoja 7,03 €, 5 l – 28,12 €.</div></details>
+          <details class="qa" data-an><summary>Ar parduodate didmenine prekyba?<i class="ph ph-plus" aria-hidden="true"></i></summary><div class="qa__a">Taip. Koncentratai tiekiami 5 l, 20 l ir 220 l talpose. Parašykite, kokius paviršius valote ir kokio kiekio reikia, atsiųsime pasiūlymą su didmeninėmis kainomis.</div></details>
+          <details class="qa" data-an><summary>Ar galiu tapti platintoju?<i class="ph ph-plus" aria-hidden="true"></i></summary><div class="qa__a">Kviečiame perpardavėjus iš visos Europos, veikia ir partnerių programa su komisiniu atlygiu. Susisiekite telefonu ar el. paštu.</div></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. NAUJIENLAIŠKIS — Salient: Row su fono spalva, CF7 inline forma -->
+    <section aria-labelledby="news-title">
+      <div class="container">
+        <div class="news" data-an>
+          <div><h2 class="h2" id="news-title" style="font-size:clamp(1.6rem,2.6vw,2.3rem)">Valymo patarimai ir pasiūlymai kartą per mėnesį</h2></div>
+          <div>
+            <form class="news__form" data-demo-form><label class="sr-only" for="nl4">El. paštas</label><input id="nl4" type="email" placeholder="Jūsų el. paštas" autocomplete="email" required><button class="btn" type="submit">Prenumeruoti</button></form>
+            <small>Prenumeratą galite atšaukti bet kada.</small>
+            <p class="form-msg" data-form-msg role="status"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- POROŠTĖ — Salient: Footer „5 columns“ + Copyright bar -->
+  <footer class="foot">
+    <div class="container">
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <img src="shared/img/nanoteqa-logo-sviesus.png" alt="Nanoteqa" width="900" height="197" loading="lazy">
+          <p>Nanotechnologijomis patobulintos valymo priemonės ir hidrofobinės dangos. Formulės kuriamos laboratorijoje Belgijoje.</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/nanoteqauk" aria-label="Facebook"><i class="ph ph-facebook-logo" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/nanoteqa" aria-label="Instagram"><i class="ph ph-instagram-logo" aria-hidden="true"></i></a>
+            <a href="https://www.tiktok.com/@nanoteqa" aria-label="TikTok"><i class="ph ph-tiktok-logo" aria-hidden="true"></i></a>
+            <a href="https://www.youtube.com/@nanoteqa" aria-label="YouTube"><i class="ph ph-youtube-logo" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="foot__col"><h4>Parduotuvė</h4><a href="#produktai" data-set="sub:virtuve">Virtuvė</a><a href="#produktai" data-set="sub:vonia">Vonia</a><a href="#produktai" data-set="area:auto">Automobiliams</a><a href="#produktai" data-set="kind:dangos">Nano dangos</a><a href="#produktai" data-tab-go="sale">Akcijos</a></div>
+        <div class="foot__col"><h4>Pagalba</h4><a href="#duk">Pristatymas</a><a href="#duk">Grąžinimas</a><a href="#duk">DUK</a><a href="#pagalba">Kontaktai</a></div>
+        <div class="foot__col"><h4>Įmonė</h4><a href="#verslui">Verslui</a><a href="#duk">Platintojams</a><a href="#duk">Partnerių programa</a><a href="#kaip">Technologija</a></div>
+        <div>
+          <h4>Kontaktai</h4>
+          <p class="foot__co"><strong>UAB „Nanoteqa“</strong><br>Domus PRO PC, Ukmergės g. 308, 12130 Vilnius</p>
+          <p class="foot__co"><strong>Nanoteqa Ltd</strong><br>71–75 Shelton Street, London WC2H 9JQ</p>
+          <p class="foot__co"><a href="tel:+37064888735">+370 648 88735</a><br><a href="mailto:info@nanoteqa.com">info@nanoteqa.com</a></p>
+        </div>
+      </div>
+      <div class="foot__chips">
+        <div class="chips"><b>Mokėjimai</b><span>Visa</span><span>Mastercard</span><span>Apple Pay</span><span>Google Pay</span><span>Bancontact</span><span>iDEAL</span></div>
+        <div class="chips"><b>Pristatymas</b><span>DPD</span><span>LP Express</span><span>Omniva</span><span>UPS</span><span>FedEx</span></div>
+      </div>
+      <div class="foot__legal"><span>© 2026 Nanoteqa</span><nav aria-label="Teisinė informacija"><a href="#duk">Pirkimo taisyklės</a><a href="#duk">Grąžinimo politika</a><a href="#duk">Privatumo politika</a></nav></div>
+    </div>
+  </footer>
+
+  <!-- Salient: WooCommerce Slide-in Cart (su pristatymo informacija) -->
+  <div class="drawer" id="krepselis" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+    <div class="drawer__bg" data-cart-close></div>
+    <aside class="drawer__panel">
+      <div class="drawer__head"><h2 id="cart-title">Krepšelis</h2><button class="x" type="button" data-cart-close aria-label="Uždaryti krepšelį"><i class="ph ph-x" aria-hidden="true"></i></button></div>
+      <div class="ship-bar"><p><i class="ph ph-truck" aria-hidden="true"></i>Išsiunčiame per 1–2 d. d. · paštomatas 2 €</p></div>
+      <div class="drawer__items" data-cart-items></div>
+      <div class="drawer__foot">
+        <div class="drawer__sum"><span>Tarpinė suma<small>Pristatymas skaičiuojamas atsiskaitant</small></span><span data-cart-sum>0,00 €</span></div>
+        <button class="btn btn--block" type="button" data-checkout>Apmokėti <i class="ph ph-lock-simple" aria-hidden="true"></i></button>
+      </div>
+    </aside>
+  </div>
+
+  <!-- Salient: WooCommerce Quick View -->
+  <div class="qv" id="qv" role="dialog" aria-modal="true" aria-labelledby="qv-title">
+    <div class="qv__bg" data-qv-close></div>
+    <div class="qv__box"><button class="x" type="button" data-qv-close aria-label="Uždaryti"><i class="ph ph-x" aria-hidden="true"></i></button><div class="qv__img" data-qv-img></div><div class="qv__body" data-qv-body></div></div>
+  </div>
+
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+  <div class="mbar" data-mbar><span data-mbar-txt></span><button class="btn btn--sm" type="button" data-cart-open>Krepšelis <i class="ph ph-arrow-right" aria-hidden="true"></i></button></div>
+
+  <script src="shared/js/data.js?v=1"></script>
+  <script src="assets/js/main.js?v=2"></script>
+</body>
+</html>
