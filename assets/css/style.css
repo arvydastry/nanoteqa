@@ -520,6 +520,56 @@ ul, ol { list-style: none; padding: 0; }
 .mbar { display: none; }
 
 /* =========================================================
+   Partneriai (Salient: Clients „Grayscale → color on hover“)
+   ========================================================= */
+.partners { margin-top: 14px; display: flex; align-items: center; gap: 18px 36px; padding: 18px 28px; border-radius: var(--r-lg); background: #fff; box-shadow: var(--shadow); }
+.partners__title { flex: none; font-size: 13.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-3); padding-right: 30px; border-right: 1px solid var(--line); }
+.partners__list { flex: 1; display: flex; align-items: center; justify-content: space-between; gap: 18px 30px; flex-wrap: wrap; }
+.partners__list li { display: grid; place-items: center; height: 44px; }
+.partners__list img { height: 30px; width: auto; filter: grayscale(1); opacity: .55; transition: filter .4s, opacity .4s, transform .4s var(--ease); }
+.partners__list li:nth-child(6) img { height: 38px; }
+.partners__list li:hover img { filter: none; opacity: 1; transform: translateY(-2px); }
+
+/* =========================================================
+   Kodėl verta rinktis mus (Salient: Icon List + Image with Animation tinklelis)
+   ========================================================= */
+.choose { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(28px, 4.5vw, 64px); align-items: start; padding: clamp(26px, 4vw, 56px); border-radius: var(--r-xl); background: #fff; box-shadow: var(--shadow); }
+.choose__copy { display: grid; gap: 16px; justify-items: start; }
+.adv { display: grid; width: 100%; margin: 6px 0 12px; counter-reset: adv; }
+.adv li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.adv li:last-child { border-bottom: 0; }
+.adv i { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: var(--aqua-50); color: var(--aqua-strong); font-size: 20px; transition: background .3s, color .3s, transform .4s var(--ease); }
+.adv li:hover i { background: var(--navy); color: #fff; transform: rotate(-8deg); }
+.adv p { font-size: 15.5px; line-height: 1.5; color: var(--ink-2); padding-top: 8px; }
+.adv b { font-weight: 700; color: var(--ink); }
+.choose__germs { display: grid; gap: 14px; }
+.germs { padding: 20px 20px 22px; border-radius: var(--r-lg); background: var(--paper); }
+.germs:first-child { background: var(--t-sidabras); }
+.germs__title { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 16px; font-size: 13.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--ink-2); }
+.germs__title i { font-size: 16px; color: var(--aqua-strong); }
+.germs__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px 12px; }
+.germs__grid li { display: grid; justify-items: center; gap: 10px; text-align: center; font-size: 14.5px; font-weight: 600; line-height: 1.25; color: var(--ink); }
+.germ { display: block; width: min(100%, 96px); aspect-ratio: 1; border-radius: 50%; overflow: hidden; background: #fff; box-shadow: 0 0 0 4px #fff, 0 10px 20px -12px rgba(14, 27, 46, .45); transition: transform .5s var(--ease), box-shadow .4s; }
+.germ img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+.germs__grid li:hover .germ { transform: translateY(-4px); box-shadow: 0 0 0 4px var(--aqua), 0 16px 26px -14px rgba(14, 27, 46, .5); }
+.germs__grid li:hover .germ img { transform: scale(1.12); }
+
+@media (max-width: 960px) {
+  .partners { flex-direction: column; align-items: flex-start; padding: 18px 20px; }
+  .partners__title { border-right: 0; padding-right: 0; }
+  .partners__list { width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); justify-items: center; }
+  .choose { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .partners__list img { height: 24px; }
+  .partners__list li:nth-child(6) img { height: 30px; }
+  .germs { padding: 16px 12px 18px; }
+  .germs__grid { gap: 14px 8px; }
+  .germs__grid li { font-size: 12.5px; gap: 8px; }
+  .germ { box-shadow: 0 0 0 3px #fff, 0 8px 16px -10px rgba(14, 27, 46, .45); }
+}
+
+/* =========================================================
    Atsiradimas (Salient: Column animation „Fade In From Bottom“)
    ========================================================= */
 .js [data-an] { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform 1s var(--ease); transition-delay: var(--d, 0ms); }

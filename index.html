@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:wght@400..700&display=swap">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css">
-  <link rel="stylesheet" href="assets/css/style.css?v=2">
+  <link rel="stylesheet" href="assets/css/style.css?v=3">
   <link rel="preload" as="image" href="assets/img/linija.webp">
   <script>document.documentElement.classList.add('js');</script>
 </head>
@@ -172,6 +172,20 @@
           <li class="usp" data-an style="--d:120ms"><i class="ph ph-truck" aria-hidden="true"></i><div><strong>Išsiunčiame per 1–2 d. d.</strong><span>Paštomatai nuo 2 €, kurjeris 5 €</span></div></li>
           <li class="usp" data-an style="--d:180ms"><i class="ph ph-headset" aria-hidden="true"></i><div><strong>Nemokama konsultacija</strong><span>Padėsime parinkti priemonę</span></div></li>
         </ul>
+
+        <!-- Mūsų partneriai — pasitikėjimo ženklai prie pirmo ekrano.
+             Salient: Clients element („Grayscale“, hover – spalvos) arba Image with Animation eilutė -->
+        <div class="partners" data-an aria-labelledby="partners-title">
+          <p class="partners__title" id="partners-title">Mūsų partneriai</p>
+          <ul class="partners__list">
+            <li><img src="assets/img/partneriai/amazon.png" alt="Amazon" width="318" height="96" loading="lazy"></li>
+            <li><img src="assets/img/partneriai/lengow.png" alt="Lengow" width="453" height="96" loading="lazy"></li>
+            <li><img src="assets/img/partneriai/trustpilot.png" alt="Trustpilot" width="391" height="96" loading="lazy"></li>
+            <li><img src="assets/img/partneriai/allegro.png" alt="Allegro" width="286" height="96" loading="lazy"></li>
+            <li><img src="assets/img/partneriai/pigu.png" alt="pigu.lt" width="299" height="96" loading="lazy"></li>
+            <li><img src="assets/img/partneriai/tiktok-shop.png" alt="TikTok Shop" width="200" height="96" loading="lazy"></li>
+          </ul>
+        </div>
       </div>
     </section>
 
@@ -211,6 +225,40 @@
         </div>
         <div class="grid" data-grid aria-live="polite"></div>
         <div class="grid-foot"><a class="btn btn--line" href="#produktai" data-set="all" data-more>Rodyti visus produktus <i class="ph ph-arrow-right" aria-hidden="true"></i></a></div>
+      </div>
+    </section>
+
+    <!-- 3a. KODĖL VERTA RINKTIS MUS — 7 pranašumai + ką pašalina ir nuo ko saugo (nuotraukos iš nanoteqa.lt).
+         Salient: Row 2 kolonos (apvalintas baltas fonas), Icon List („Numbered“ / ikonėlės), Button;
+         dešinėje – Image with Animation (apskritos) tinklelis su antraštėmis, hover „Zoom“ -->
+    <section class="sec" id="kodel" style="padding-top:0" aria-labelledby="choose-title">
+      <div class="container">
+        <div class="choose" data-an>
+          <div class="choose__copy">
+            <p class="kicker">Kodėl Nanoteqa</p>
+            <h2 class="h2" id="choose-title">Kodėl verta rinktis mus?</h2>
+            <ol class="adv">
+              <li><i class="ph ph-flask" aria-hidden="true"></i><p><b>Didelė valymo tirpiklių koncentracija</b>, todėl priemonės sunaudojate mažai.</p></li>
+              <li><i class="ph ph-shield-check" aria-hidden="true"></i><p><b>Ilgai išliekanti nano danga</b> ir <b>antistatinis</b> poveikis: efektyvumas iki 7 dienų.</p></li>
+              <li><i class="ph ph-atom" aria-hidden="true"></i><p><b>Sidabro nanodalelės</b> yra stipriai <b>biocidinės</b>: užkerta kelią kenksmingiems mikroorganizmams (virusams, grybeliams ir pelėsiams).</p></li>
+              <li><i class="ph ph-sparkle" aria-hidden="true"></i><p>Poliruojant mikropluošto šluoste <b>nanodalelės</b> įsiskverbia į paviršių ir suteikia <b>blizgesį be dryžių</b>.</p></li>
+              <li><i class="ph ph-leaf" aria-hidden="true"></i><p>Tik <b>ekologiškos</b> ir <b>neagresyvios</b> cheminės medžiagos.</p></li>
+              <li><i class="ph ph-palette" aria-hidden="true"></i><p>Specialios veikliosios medžiagos <b>išsaugo paviršiaus spalvą ir tekstūrą</b>.</p></li>
+              <li><i class="ph ph-recycle" aria-hidden="true"></i><p>Tik <b>aukštos kokybės</b> JK plastikas, <b>100 % perdirbta</b> medžiaga.</p></li>
+            </ol>
+            <a class="btn" href="#produktai" data-set="all">Visi katalogai <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+          </div>
+          <div class="choose__germs">
+            <div class="germs">
+              <p class="germs__title"><i class="ph-fill ph-atom" aria-hidden="true"></i>Stabdo mikroorganizmų plitimą</p>
+              <ul class="germs__grid"><li><span class="germ"><img src="assets/img/valo/grybelis.webp" alt="" loading="lazy" width="240" height="240"></span><span>Grybelis</span></li><li><span class="germ"><img src="assets/img/valo/virusai.webp" alt="" loading="lazy" width="240" height="240"></span><span>Virusai</span></li><li><span class="germ"><img src="assets/img/valo/bakterijos.webp" alt="" loading="lazy" width="240" height="240"></span><span>Bakterijos</span></li><li><span class="germ"><img src="assets/img/valo/covid-19.webp" alt="" loading="lazy" width="240" height="240"></span><span>Covid-19</span></li></ul>
+            </div>
+            <div class="germs">
+              <p class="germs__title"><i class="ph-fill ph-sparkle" aria-hidden="true"></i>Pašalina nešvarumus ir kvapus</p>
+              <ul class="germs__grid"><li><span class="germ"><img src="assets/img/valo/riebalai.webp" alt="" loading="lazy" width="240" height="240"></span><span>Riebalai</span></li><li><span class="germ"><img src="assets/img/valo/demes.webp" alt="" loading="lazy" width="240" height="240"></span><span>Dėmės</span></li><li><span class="germ"><img src="assets/img/valo/pirstu-atspaudai.webp" alt="" loading="lazy" width="240" height="240"></span><span>Pirštų atspaudai</span></li><li><span class="germ"><img src="assets/img/valo/dulkes.webp" alt="" loading="lazy" width="240" height="240"></span><span>Dulkės</span></li><li><span class="germ"><img src="assets/img/valo/nesvarumai.webp" alt="" loading="lazy" width="240" height="240"></span><span>Nešvarumai</span></li><li><span class="germ"><img src="assets/img/valo/rudys.webp" alt="" loading="lazy" width="240" height="240"></span><span>Rūdys</span></li><li><span class="germ"><img src="assets/img/valo/zymes.webp" alt="" loading="lazy" width="240" height="240"></span><span>Žymės</span></li><li><span class="germ"><img src="assets/img/valo/kvapas.webp" alt="" loading="lazy" width="240" height="240"></span><span>Nemalonus kvapas</span></li></ul>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -291,7 +339,6 @@
             <div class="stat" data-an style="--d:60ms"><strong><span data-count-to="25">25</span></strong><span>Europos šalys, į kurias pristatome</span></div>
             <div class="stat" data-an style="--d:120ms"><strong><span data-count-to="7">7</span><sup>d.</sup></strong><span>nano plėvelės antistatinis poveikis</span></div>
             <div class="stat" data-an style="--d:180ms"><strong><span data-count-to="100">100</span><sup>%</sup></strong><span>perdirbtas JK plastikas pakuotėms</span></div>
-            <div class="stat stat--wide" data-an><p>Taip pat parduodame</p><b>Amazon</b><b>eBay</b><b>Etsy</b><b>Allegro</b><b>TikTok Shop</b></div>
           </div>
         </div>
 
